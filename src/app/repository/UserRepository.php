@@ -3,12 +3,13 @@
 namespace Wrsg\App;
 
 use PDO;
+use Wrsg\App\repository\dbMysql;
 
 class UserRepository
 {
     private PDO $connection;
 
-    public function __construct(DatabaseConnection $databaseConnection)
+    public function __construct(dbMysql $databaseConnection)
     {
         $this->connection = $databaseConnection->getConnection();
     }
