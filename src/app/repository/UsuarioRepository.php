@@ -36,8 +36,10 @@ class UsuarioRepository
     private function mapToEntity(array $data): Usuario
     {
         $usuario = new Usuario($data['nome'], $data['email'], '');
-        //$usuario->setId($data['id']);
-        // Aqui, se você deseja também definir a senha ou outras propriedades, faça conforme necessário.
+        $usuario->setId($data['id']);
+
+        var_dump(json_encode($usuario));
+
         return $usuario;
     }
 }

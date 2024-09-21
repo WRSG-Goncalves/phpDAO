@@ -86,6 +86,10 @@ class Usuario
         $this->dtAlteracao = new \DateTime();
     }
 
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
 
     // public function getById($id){
     //     $sql = new db();
