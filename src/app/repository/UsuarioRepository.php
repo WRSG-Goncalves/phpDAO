@@ -42,4 +42,13 @@ class UsuarioRepository
 
         return $usuario;
     }
-}
+
+    public funcion getList(): Usuario
+    {
+
+        $sql = new Sql();
+
+        return $sql->select("SELECT * FROM usuarios order by deslogin") ;
+
+    }
+
